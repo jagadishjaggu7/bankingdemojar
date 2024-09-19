@@ -21,7 +21,6 @@ jobs:
           distribution: 'microsoft'
 
       - name: Build with Maven
-        working-directory: SB_Banking
         run: mvn clean install
 
       - name: Upload artifact for deployment job
