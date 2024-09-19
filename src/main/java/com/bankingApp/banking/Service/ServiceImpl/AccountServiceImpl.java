@@ -38,7 +38,7 @@ public class AccountServiceImpl implements AccountServiceInterface {
     public AccountDto debitAmount(Long AccountId, double debitAmount) {
         Account acc=accountRepo.findById(AccountId).orElseThrow(()-> new ResourceNotFoundException("Account is not found with specific Id "+AccountId));
         if (debitAmount > acc.getBalance()){
-            throw new NotEnoughAmountExecption("Not Enough Amount  and Your Balance is "+acc.getBalance());
+            throw new NotEnoughAmountException("Not Enough Amount  and Your Balance is "+acc.getBalance());
         }
         double balance = acc.getBalance()-debitAmount;
         acc.setBalance(balance);
