@@ -2,7 +2,7 @@ package com.bankingApp.banking.Service.ServiceImpl;
 
 import com.bankingApp.banking.Dto.AccountDto;
 import com.bankingApp.banking.Entity.Account;
-import com.bankingApp.banking.Exception.NotEnoughAmountExecption;
+import com.bankingApp.banking.Exception.NotEnoughAmountException;
 import com.bankingApp.banking.Exception.ResourceNotFoundException;
 import com.bankingApp.banking.Mapper.AccountMapper;
 import com.bankingApp.banking.Repository.AccountRepo;
